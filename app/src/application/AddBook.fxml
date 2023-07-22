@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="538.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddBookController">
+   <children>
+      <TableView fx:id="table" layoutX="-7.0" layoutY="233.0" onZoom="#select" prefHeight="177.0" prefWidth="400.0">
+        <columns>
+          <TableColumn fx:id="firstNameCol" prefWidth="75.0" text="nom" />
+          <TableColumn fx:id="lastNameCol" prefWidth="75.0" text="prenom" />
+            <TableColumn fx:id="emailCol" prefWidth="170.0" text="email" />
+            <TableColumn fx:id="telCol" prefWidth="64.0" text="tel" />
+        </columns>
+      </TableView>
+      <Label layoutX="30.0" layoutY="23.0" prefHeight="27.0" prefWidth="96.0" text="nom     :   ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="63.0" text="prenom :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="101.0" text="email    :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="142.0" text="Tel    :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfFirstName" layoutX="106.0" layoutY="24.0" prefHeight="25.0" prefWidth="190.0" />
+      <TextField fx:id="tfLastName" layoutX="106.0" layoutY="64.0" prefHeight="25.0" prefWidth="190.0" />
+      <TextField fx:id="tfEmail" layoutX="106.0" layoutY="102.0" prefHeight="25.0" prefWidth="190.0" />
+      <TextField fx:id="tfTel" layoutX="106.0" layoutY="143.0" prefHeight="25.0" prefWidth="190.0" />
+      <Button fx:id="addBtn" layoutX="105.0" layoutY="185.0" mnemonicParsing="false" onAction="#addPersonne" prefHeight="25.0" prefWidth="190.0" text="Ajouter à la table" />
+      <Button fx:id="removeBtn" layoutX="6.0" layoutY="439.0" mnemonicParsing="false" onAction="#removePersonne" text="Supprimer" />
+      <Button fx:id="importBtn" layoutX="91.0" layoutY="439.0" mnemonicParsing="false" onAction="#importerListe" prefHeight="25.0" prefWidth="71.0" text="Importer" />
+      <Button fx:id="exportBtn" layoutX="224.0" layoutY="439.0" mnemonicParsing="false" onAction="#exporterListe" prefHeight="25.0" prefWidth="71.0" text="Exporter" />
+      <Button fx:id="quitBtn" layoutX="322.0" layoutY="439.0" mnemonicParsing="false" onAction="#quitterApplication" prefHeight="25.0" prefWidth="71.0" text="Quitter" />
+      <Button fx:id="modiferBtn" layoutX="415.0" layoutY="439.0" mnemonicParsing="false" onAction="#modifier" prefHeight="25.0" prefWidth="71.0" text="Modifier" />
+   </children>
+</AnchorPane>
